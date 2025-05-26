@@ -56,7 +56,8 @@ export default function SlideImage({images,points,setPoints}) {
                 exit={{ opacity: 0, y: info => (info < 0 ? -300 : 300) }}
                 style={{
                   backgroundImage: `url(${card.imageUrl})`,
-                  backgroundSize: 'cover',
+                   backgroundSize: 'contain',         
+  backgroundRepeat: 'no-repeat',
                   backgroundPosition: 'center'
                 }}
               >

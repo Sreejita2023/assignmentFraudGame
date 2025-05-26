@@ -3,12 +3,12 @@ import { get, ref, child } from 'firebase/database';
 import { realtimeDB } from '../firebase'; // make sure this exports your realtime DB instance
 import { useUser } from '../context/UserContext';
 import '../styles/Dashboard.css';
-import Sidebar from './Sidebar';
-
+import { useNavigate } from 'react-router-dom';
+import Topbar from './Topbar';
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const { uid } = useUser();
-
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchLeaderboard = async () => {
       const dbRef = ref(realtimeDB);
@@ -40,8 +40,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-        <Sidebar/>
-      <h1 className="title">CATCH THE FAKE</h1>
+        <Topbar/>
       <div className="leaderboard-box">
         <h2>LEADERBOARD</h2>
         <div className="leaderboard">
@@ -61,7 +60,7 @@ const Dashboard = () => {
         </div>
         <div className="buttons">
           <button className="btn share">🔗 Share</button>
-          <button className="btn play-again">🔁 Play Again</button>
+          <button className="btn play-again" onClick={()=>navigate("/game")}>Play Again</button>
         </div>
       </div>
     </div>

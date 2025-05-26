@@ -2,10 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
-import Sidebar from './Sidebar'; // Assuming Sidebar already exists
 import SlideImage from './SlideImage';
 import '../styles/Game.css';
-
+import Topbar from './Topbar';
 
 
 const Game = () => {
@@ -32,29 +31,28 @@ const Game = () => {
 
   return (
     <div className="game-container">
-      <Sidebar />
-
-      <div className="header">
-        <h1 className="title">CATCH THE FAKE</h1>
-        <div className="score-container">
-          <div className="score-icon">⭐</div>
+      <Topbar />
+       <img src='/redCircle.png' width={500} height={250} className='red'/>
+      
+      <div className="score-container">
+         <img src="/star.png" alt="star" width={40} height={40}/>
           <div className="score-value">{points}</div>
         </div>
-      </div>
 
        {images.length > 0 ? (
       <SlideImage images={images} points={points} setPoints={setPoints} />
     ) : (
       <p className="loading-text">Loading images...</p>
     )}
-
-      {/* <div className="instruction">
-        <div className="instruction-icon">🖐️</div>
+      
+      <div className="instruction">
+        <div className="instruction-icon"><img src='/instructionIcon.png' width={40} height={40}/></div>
         <div className="instruction-text">
-          Drag <strong>“Up”</strong> the fraud message and <br />
+          Drag <strong>“Up”</strong> the fraud message and 
           Drag <strong>“Down”</strong> the Safe message
         </div>
-      </div> */}
+      </div>
+      <img src='/greenCircle.png' width={500} height={250}className='green'/>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { ref, set } from 'firebase/database';
 import { auth, realtimeDB } from '../firebase';
 import '../styles/Register.css';
-import Sidebar from './Sidebar';
+import Topbar from './Topbar';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -64,7 +64,7 @@ const Register = () => {
 
   return (
     <div className="register-page">
-    <Sidebar />
+    <Topbar/>
     <div className="register-container">
       <h2>Register yourself</h2>
       <form className="register-form" onSubmit={handleSubmit}>

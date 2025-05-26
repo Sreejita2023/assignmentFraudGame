@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Login.css'; // your custom CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import Sidebar from './Sidebar';
 import { useUser } from '../context/UserContext';
+import Topbar from './Topbar';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -31,8 +31,6 @@ const Login = () => {
           navigate('/dashboard');
         }
       });
-    //   alert('Login successful!');
-    //   navigate('/dashboard');
     } catch (error) {
       alert(error.message);
     }
@@ -40,7 +38,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <Sidebar/>
+      <Topbar/>
       <div className="login-box">
         <h2>Log in</h2>
         <form onSubmit={handleSubmit}>

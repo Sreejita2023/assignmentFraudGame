@@ -5,23 +5,32 @@ import '../styles/GameOver.css'
 import { ref, update } from 'firebase/database'
 import { realtimeDB } from '../firebase'  // adjust path if needed
 import { useUser } from '../context/UserContext' 
+import { get } from 'firebase/database';
 
 const GameOver=({ points })=> {
   const navigate = useNavigate()
   const { uid } = useUser()
 
-  useEffect(() => {
-    if (uid && points >= 0) {
-      const userRef = ref(realtimeDB, `users/${uid}`)
-      update(userRef, { points })
-        .then(() => {
-          console.log('Points updated in Firebase')
-        })
-        .catch((err) => {
-          console.error('Error updating points:', err)
-        })
-    }
-  }, [uid, points])
+ useEffect(() => {
+  if (uid && points >= 0) {
+    const userRef = ref(realtimeDB, `users/${uid}`);
+
+    // Fetch current points and add the new points
+    get(userRef)
+      .then(snapshot => {
+        const currentPoints = snapshot.val().points;
+        const updatedPoints = currentPoints + points;
+
+        return update(userRef, { points: updatedPoints });
+      })
+      .then(() => {
+        console.log('Points successfully updated in Firebase');
+      })
+      .catch(err => {
+        console.error('Error updating points:', err);
+      });
+  }
+}, [uid, points]);
 
   return (
     <div className="game-over-overlay">

@@ -20,7 +20,7 @@ align-items: center;
 
 .popup-cross-wrapper {
 position: absolute;
-top: -30px;
+top: -10px;
 display: flex;
 justify-content: center;
 width: 100%;
@@ -41,7 +41,7 @@ z-index: 2;
 }
 
 .popup-fraud-button {
-margin-top: 50px;
+margin-top: 90px;
 background: transparent;
 border: 2px solid white;
 color: white;
