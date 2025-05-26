@@ -38,7 +38,7 @@ const GameOver=({ points })=> {
         <h2 className="game-over-title">GAME <br /> OVER</h2>
         <p className="game-over-subtitle">You have scored</p>
         <div className="game-over-points">
-          <div className="star-icon">⭐</div>
+          <img src="/star.png" alt="star" width={40} height={40}/>
           <span className="points-text">{points} <span className="points-unit">Points</span></span>
         </div>
         <button className="continue-button" onClick={() => navigate('/dashboard')}>

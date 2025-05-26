@@ -26,7 +26,14 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { name, email, phone, password, confirmPassword,points} = formData;
-
+    if(phone.length!=10){
+       alert('Invalid Number!');
+      return;
+    }
+    if(!email.includes('@gmail.com')){
+      alert('Invalid Email!');
+       return;
+    }
     if (password !== confirmPassword) {
       alert('Passwords do not match!');
       return;
