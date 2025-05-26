@@ -1,0 +1,82 @@
+/* GameOverPopup.css */
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(19, 27, 66, 0.95), rgba(0, 0, 20, 0.9));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.game-over-card {
+  background: #0f1d4c;
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 2px solid #3b67f3;
+}
+
+.game-over-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.game-over-subtitle {
+  color: #ddd;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.game-over-points {
+  background: #030c2e;
+  border-radius: 16px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.star-icon {
+  font-size: 24px;
+  color: #6dd4ff;
+  border: 1px solid #6dd4ff;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.points-text {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.points-unit {
+  font-size: 14px;
+  color: #bbb;
+  margin-left: 4px;
+}
+
+.continue-button {
+  background: #0f1d4c;
+  border: 2px solid #3b67f3;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #1c2e70;
+}

@@ -1,0 +1,78 @@
+.dashboard-container {
+    background: #0b0f3a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .leaderboard-box {
+    background: #12194d;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .leaderboard {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .leaderboard-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c3360;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 8px 0;
+  }
+  
+  .leaderboard-entry .rank {
+    width: 30px;
+  }
+  
+  .leaderboard-entry .circle {
+    background: #3f4d91;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .highlighted {
+    background: #0070f3;
+    color: white;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    background: #141e5c;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background: #1f2e89;
+  }
+  

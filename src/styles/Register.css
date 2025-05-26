@@ -1,0 +1,72 @@
+.register-page {
+    background: radial-gradient(#001144, #000022);
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 50, 0.6);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background-color: white;
+  }
+  
+  .register-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  
+  .register-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .register-form input {
+    background: #111;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .register-form button {
+    grid-column: span 2;
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-form button:hover {
+    background-color: #0033aa;
+  }
+  

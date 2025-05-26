@@ -1,0 +1,60 @@
+.fraud-popup-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: transparent; /* Optional: can use semi-transparent dark if needed */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 999;
+}
+
+.fraud-popup-container {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.popup-cross-wrapper {
+position: absolute;
+top: -30px;
+display: flex;
+justify-content: center;
+width: 100%;
+cursor: pointer;
+}
+
+.popup-cross-circle {
+background: radial-gradient(#ff4c4c, #b30000);
+border: 3px solid white;
+width: 65px;
+height: 65px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+z-index: 2;
+}
+
+.popup-fraud-button {
+margin-top: 50px;
+background: transparent;
+border: 2px solid white;
+color: white;
+background-color: #b30000;
+padding: 10px 22px;
+border-radius: 999px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.3);
+transition: background 0.3s ease;
+}
+
+.popup-fraud-button:hover {
+background-color: #8a0000;
+}
